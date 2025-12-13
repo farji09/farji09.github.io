@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henna artiganale di naviglio</title>
+
+    <style>
+        /* ------------------------------------------- */
+        /* CSS: STILI PER IL SITO E LO SFONDO */
+        /* ------------------------------------------- */
+
+        body {
+            /* Imposta l'immagine come sfondo */
+            background-image: url('sfondo.jpg'); /* **IMPORTANTE:** Assicurati che questo nome corrisponda al tuo file immagine! */
+            background-size: cover; /* Copre l'intera area, mantenendo le proporzioni */
+            background-position: center center; /* Centra l'immagine */
+            background-attachment: fixed; /* Mantiene lo sfondo fisso durante lo scorrimento */
+            background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+
+            font-family: 'Georgia', serif;
+            color: #333; /* Colore del testo generale */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header e Navigazione */
+        header {
+            background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
+            color: #E91E63; /* Rosa/Fucsia per l'header */
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky; /* Rende l'header fisso in alto */
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Contenuto Principale */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px; /* Limita la larghezza per la leggibilità */
+        }
+
+        /* Riquadro di Contenuto (per il testo) */
+        .content-box {
+            /* Colore che si abbina all'area chiara centrale dell'immagine */
+            background-color: rgba(255, 250, 240, 0.98); /* Quasi bianco/crema opaco */
+            padding: 40px 60px;
+            border-radius: 30px; /* Bordi arrotondati */
+            box-shadow: 0 0 30px rgba(233, 30, 99, 0.5); /* Ombra colorata che richiama lo sfondo */
+            margin-top: 50px;
+            text-align: center;
+            color: #4B0082; /* Viola indaco per il testo */
+        }
+
+        .content-box h2 {
+            color: #FF6600; /* Arancione brillante */
+            border-bottom: 2px solid #FF6600;
+            padding-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Sfondo scuro e semi-trasparente */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* Stile per i link */
+        a {
+            color: #FF00FF; /* Magenta */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #FFD700; /* Oro all'hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌟 Il Mio Sito Creativo 🌟</h1>
+    </header>
+
+    <main>
+        <section class="content-box">
+            <h2><b>Disegni che potete richiedere oppure potete uttilizzare la vostra creatività e cercare ciò che preferite</b></h2>
+            <p>
+               <u><b>Vieni a scoprire l'arte dell'Henna!</b></u><br><br>
+Siamo specializzati in disegni artigianali creati con cura sulla pelle. Offriamo:
+<br>Disegni di Fiori: Eleganti e delicati motivi floreali, perfetti per decorare il tuo corpo con un tocco naturale.
+<br><br>Tatuaggi Temporanei Personalizzati: Realizziamo anche disegni unici su richiesta, creando il tuo tatuaggio temporaneo ideale.
+Le nostre creazioni sono completamente temporanee e svaniscono naturalmente nel tempo.
+            </p>
+            
+            <p>
+                <a href="#">Clicca qui per esplorare!</a>
+            </p>
+        </section>
+        
+        <div style="height: 500px;"></div> 
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2025 Sfondo Personalizzato. Progettato con HTML, CSS e JavaScript.
+            <span id="timestamp"></span>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Il sito è pronto e gli script sono attivi.");
+
+            // Funzione per aggiornare l'anno e l'ora nel footer
+            const now = new Date();
+            const year = now.getFullYear();
+            const timeString = now.toLocaleTimeString('it-IT');
+            document.getElementById('timestamp').textContent = ` (Caricato alle ${timeString})`;
+
+            // Esempio: Cambia il colore del testo del footer al click
+            const footer = document.querySelector('footer');
+            if (footer) {
+                footer.addEventListener('click', () => {
+                    // Alterna il colore tra bianco e arancione
+                    const isWhite = footer.style.color === 'white' || footer.style.color === '';
+                    footer.style.color = isWhite ? '#FFA500' : 'white';
+                    footer.querySelector('p').style.fontWeight = isWhite ? 'bold' : 'normal';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
