@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henna artigianale di naviglio - Galleria</title>
+
+    <style>
+        /* [CSS INIZIALE RIMANE UGUALE] */
+        body {
+            /* **IMPORTANTE:** Assicurati che 'sfondo.jpg' sia caricato o usa un URL! */
+            background-image: url('sfondo.jpg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat; 
+
+            font-family: 'Georgia', serif;
+            color: #333; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header e Navigazione */
+        header {
+            background-color: rgba(255, 255, 255, 0.9); 
+            color: #E91E63; 
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky; 
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Contenuto Principale */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px; 
+        }
+
+        /* Riquadro di Contenuto (per il testo) */
+        .content-box {
+            background-color: rgba(255, 250, 240, 0.98); 
+            padding: 40px 20px; 
+            border-radius: 30px; 
+            box-shadow: 0 0 30px rgba(233, 30, 99, 0.5); 
+            margin-top: 50px;
+            text-align: center;
+            color: #4B0082; 
+        }
+
+        .content-box h2 {
+            color: #FF6600; 
+            border-bottom: 2px solid #FF6600;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* --- STILI DELLA GALLERIA IMMAGINI --- */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            padding: 20px 0;
+        }
+
+        /* Il contenitore gallery-item */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            line-height: 0; /* Rimuove lo spazio extra sotto l'immagine causato da line-height */
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03); 
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.7);
+        }
+        
+        /* Lo stile si applica al link che contiene l'immagine */
+        .gallery-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px; 
+            object-fit: cover; 
+            display: block;
+            border: none; /* Rimuove il potenziale bordo che i link possono aggiungere */
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* Stile per i link */
+        a {
+            color: #FF00FF; 
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #FFD700; 
+        }
+
+        /* Media Queries per adattabilità (mobile) */
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌟 Henna artigianale 🌟</h1>
+    </header>
+
+    <main>
+        <section class="content-box">
+            <h2><b>Disegni che potete richiedere,<br> oppure potete utilizzare la vostra creatività e richiedere ciò che vi porta felicità</b></h2>
+            
+            <div class="gallery">
+                
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/KxWzL8Vm/Whats-App-Image-2025-12-13-at-23-17-18-1.jpg" target="_blank">
+                        <img src="https://i.ibb.co/KxWzL8Vm/Whats-App-Image-2025-12-13-at-23-17-18-1.jpg" alt="Disegno Henna 1">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/nNfMQ61C/Whats-App-Image-2025-12-13-at-23-17-18.jpg" target="_blank">
+                        <img src="https://i.ibb.co/nNfMQ61C/Whats-App-Image-2025-12-13-at-23-17-18.jpg" alt="Disegno Henna 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/nMD3xZgS/Whats-App-Image-2025-12-13-at-23-17-17-4.jpg" target="_blank">
+                        <img src="https://i.ibb.co/nMD3xZgS/Whats-App-Image-2025-12-13-at-23-17-17-4.jpg" alt="Disegno Henna 3">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/hFNMdLVp/Whats-App-Image-2025-12-13-at-23-17-17-3.jpg" target="_blank">
+                        <img src="https://i.ibb.co/hFNMdLVp/Whats-App-Image-2025-12-13-at-23-17-17-3.jpg" alt="Disegno Henna 4">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/DDPHVPGj/Whats-App-Image-2025-12-13-at-23-17-17-2.jpg" target="_blank">
+                        <img src="https://i.ibb.co/DDPHVPGj/Whats-App-Image-2025-12-13-at-23-17-17-2.jpg" alt="Disegno Henna 5">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/gFgwF35Q/Whats-App-Image-2025-12-13-at-23-17-17-1.jpg" target="_blank">
+                        <img src="https://i.ibb.co/gFgwF35Q/Whats-App-Image-2025-12-13-at-23-17-17-1.jpg" alt="Disegno Henna 6">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/vvXY5nQD/Whats-App-Image-2025-12-13-at-23-17-17.jpg" target="_blank">
+                        <img src="https://i.ibb.co/vvXY5nQD/Whats-App-Image-2025-12-13-at-23-17-17.jpg" alt="Disegno Henna 7">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/rGLQv8Gw/Whats-App-Image-2025-12-13-at-23-17-16-7.jpg" target="_blank">
+                        <img src="https://i.ibb.co/rGLQv8Gw/Whats-App-Image-2025-12-13-at-23-17-16-7.jpg" alt="Disegno Henna 8">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/HD0vMxkW/Whats-App-Image-2025-12-13-at-23-17-16-6.jpg" target="_blank">
+                        <img src="https://i.ibb.co/HD0vMxkW/Whats-App-Image-2025-12-13-at-23-17-16-6.jpg" alt="Disegno Henna 9">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/p6pmHMPQ/Whats-App-Image-2025-12-13-at-23-17-16-5.jpg" target="_blank">
+                        <img src="https://i.ibb.co/p6pmHMPQ/Whats-App-Image-2025-12-13-at-23-17-16-5.jpg" alt="Disegno Henna 10">
+                    </a>
+                </div>
+                 <div class="gallery-item">
+                    <a href="https://i.ibb.co/G35P2Dsj/Whats-App-Image-2025-12-13-at-23-17-16-4.jpg" target="_blank">
+                        <img src="https://i.ibb.co/G35P2Dsj/Whats-App-Image-2025-12-13-at-23-17-16-4.jpg" alt="Disegno Henna 11">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/MDcg2scK/Whats-App-Image-2025-12-13-at-23-17-16-3.jpg" target="_blank">
+                        <img src="https://i.ibb.co/MDcg2scK/Whats-App-Image-2025-12-13-at-23-17-16-3.jpg" alt="Disegno Henna 12">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/m5Tnsx2f/Whats-App-Image-2025-12-13-at-23-17-16-2.jpg" target="_blank">
+                        <img src="https://i.ibb.co/m5Tnsx2f/Whats-App-Image-2025-12-13-at-23-17-16-2.jpg" alt="Disegno Henna 13">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/m5Tnsx2f/Whats-App-Image-2025-12-13-at-23-17-16-2.jpg" target="_blank">
+                        <img src="https://i.ibb.co/m5Tnsx2f/Whats-App-Image-2025-12-13-at-23-17-16-2.jpg" alt="Disegno Henna 14">
+                    </a>
+                </div>
+                 <div class="gallery-item">
+                    <a href="https://i.ibb.co/zTDf5DsB/Whats-App-Image-2025-12-13-at-23-17-16.jpg" target="_blank">
+                        <img src="https://i.ibb.co/zTDf5DsB/Whats-App-Image-2025-12-13-at-23-17-16.jpg" alt="Disegno Henna 15">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://i.ibb.co/5zv1fBD/Whats-App-Image-2025-12-13-at-23-17-15-1.jpg" target="_blank">
+                        <img src="https://i.ibb.co/5zv1fBD/Whats-App-Image-2025-12-13-at-23-17-15-1.jpg" alt="Disegno Henna 16">
+                    </a>
+                </div>
+                 <div class="gallery-item">
+                    <a href="https://i.ibb.co/dwfD4KfH/Whats-App-Image-2025-12-13-at-23-17-15.jpg" target="_blank">
+                        <img src="https://i.ibb.co/dwfD4KfH/Whats-App-Image-2025-12-13-at-23-17-15.jpg" alt="Disegno Henna 17">
+                    </a>
+                </div>
+                 <div class="gallery-item">
+                    <a href="https://i.ibb.co/h1fNtkbh/Whats-App-Image-2025-12-13-at-22-53-32.jpg" target="_blank">
+                        <img src="https://i.ibb.co/h1fNtkbh/Whats-App-Image-2025-12-13-at-22-53-32.jpg" alt="Disegno Henna 18">
+                    </a>
+                </div>
+ 
+            </div>
+            <p style="margin-top: 30px;">
+                <a href="index.html"><u>Clicca qui per ritornare nella pagina principale</u></a>
+            </p>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="year">2025</span> Sfondo Personalizzato. Progettato con HTML, CSS e JavaScript.
+            <span id="timestamp"></span>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Il sito è pronto e gli script sono attivi.");
+
+            // Aggiorna l'anno nel footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Funzione per aggiornare l'ora nel footer
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('it-IT');
+            document.getElementById('timestamp').textContent = ` (Caricato alle ${timeString})`;
+
+            // Esempio: Cambia il colore del testo del footer al click
+            const footer = document.querySelector('footer');
+            if (footer) {
+                footer.addEventListener('click', () => {
+                    const isWhite = footer.style.color === 'white' || footer.style.color === '';
+                    footer.style.color = isWhite ? '#FFA500' : 'white';
+                    footer.querySelector('p').style.fontWeight = isWhite ? 'bold' : 'normal';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
